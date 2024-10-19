@@ -25,3 +25,39 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.countdown-container {
+  text-align: center;
+  background: linear-gradient(135deg, #e09, #d0e);
+  color: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.time {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
