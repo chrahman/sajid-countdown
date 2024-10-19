@@ -2,7 +2,7 @@ import Image from "next/image";
 import Countdown from "./CountDown";
 
 export default function Home() {
-  const weddingDate = "2024-12-31T00:00:00"; // Set your friend's wedding date
+  const weddingDate = "2024-10-26T00:00:00";
 
   return (
     <div className="App">

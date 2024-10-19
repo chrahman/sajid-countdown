@@ -45,7 +45,7 @@ const Countdown = ({ weddingDate }) => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-500 to-pink-500 text-white p-6">
-      <h1 className="text-3xl md:text-5xl font-bold mb-8 text-center">Chaudhary Dy Viyah Da Countdown </h1>
+      <h1 className="text-3xl md:text-5xl font-bold mb-8 text-center">Chaudhary Dy Viyah 💍 Da Countdown </h1>
       <div className="flex flex-wrap justify-center gap-4">{timerComponents.length ? timerComponents : <span>Wedding Time!</span>}</div>
       <p className="mt-8 text-lg text-center">Time left until the chaudhary will not fall under our category!</p>
     </div>
