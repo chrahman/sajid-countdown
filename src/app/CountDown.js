@@ -7,6 +7,7 @@ import useWindowSize from "react-use/lib/useWindowSize";
 
 const Countdown = ({ weddingDate }) => {
   const { width, height } = useWindowSize();
+  const [isSoundPlayed, setIsSoundPlayed] = useState(false);
 
   const calculateTimeLeft = () => {
     const now = new Date();
@@ -36,11 +37,6 @@ const Countdown = ({ weddingDate }) => {
     return () => clearInterval(timer);
   }, [weddingDate]);
 
-  useEffect(() => {
-    const audio = new Audio("/path/to/fireworks-sound.mp3");
-    audio.play();
-  }, []);
-
   const timerComponents = Object.keys(timeLeft).map((interval, index) => {
     if (!timeLeft[interval]) {
       return null;
@@ -62,6 +58,10 @@ const Countdown = ({ weddingDate }) => {
       <div className="flex flex-wrap justify-center gap-4">{timerComponents.length ? timerComponents : <span>Wedding Time!</span>}</div>
       <p className="mt-8 text-lg text-center">Time left until the chaudhary will not fall under our category!</p>
       <Image src={Sajid} width={100} height={100} alt="Chaudhary" className="w-1/2 md:w-1/3 lg:w-1/4 mx-auto mt-8 rounded-lg shadow-md" />
+      <audio controls className="hidden" autoPlay>
+        <source src="/dhol-sound.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
     </div>
   );
 };
